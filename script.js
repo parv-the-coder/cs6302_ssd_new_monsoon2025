@@ -1,3 +1,9 @@
+import { logPageView, logClickEvents } from '../Q6/script.js'; // adjust path as needed
+
+// Attach listeners
+window.addEventListener("load", logPageView);
+document.addEventListener("click", logClickEvents);
+
 // Main JS extracted from original single-file HTML
 // File: script.js
 (function () {
