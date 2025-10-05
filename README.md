@@ -12,9 +12,8 @@ This project transforms the original single-page SSD course website into a visua
 
 ## How to View
 Visit the transformed website at:
-```
+
 https://parv-the-coder.github.io/cs6302_ssd_new_monsoon2025/newssd.html
-```
 
 ## Assumptions
 - The original page contains all required SSD course information and no content is removed during transformation.
@@ -34,3 +33,4 @@ https://parv-the-coder.github.io/cs6302_ssd_new_monsoon2025/newssd.html
 
 ## Credits
 Created for the SSD course assignment by Parv Shah.
+
