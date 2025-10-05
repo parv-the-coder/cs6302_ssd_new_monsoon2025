@@ -1,4 +1,33 @@
-import { logPageView, logClickEvents } from '../Q6/script.js'; // adjust path as needed
+export function logPageView() {
+    const log = {
+        type: "pageview",
+        url: window.location.pathname,
+        timestamp: new Date().toISOString()
+    };
+    console.log(log);
+}
+
+// Function to log click events
+export function logClickEvents(event) {
+    let element = event.target; // The clicked element
+
+    const log = {
+        type: "click",
+        tag: element.tagName || null,
+        id: element.id || null,
+        class: element.className && element.className !== "" ? element.className : null,
+        text: element.innerText ? element.innerText.trim().slice(0, 50) : null, // limit to 50 chars
+        timestamp: new Date().toISOString()
+    };
+
+    console.log(log);
+}
+
+// Attach listeners when page loads
+window.addEventListener("load", () => {
+    logPageView();
+    document.addEventListener("click", logClickEvents);
+});
 
 // Attach listeners
 window.addEventListener("load", logPageView);
